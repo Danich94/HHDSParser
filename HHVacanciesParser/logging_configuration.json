@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple_formatter": {
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            "datefmt": "%d-%m-%y %H:%M:%S"
+        }
+    },
+    "handlers": {
+        "file_handler": {
+            "class": "logging.FileHandler",
+            "formatter": "simple_formatter",
+            "filename": "log_text_loader.log"
+        }
+    },
+    "loggers": {
+        "root": {
+            "handlers": ["file_handler"],
+            "level": "INFO"
+        }
+    }
+}
